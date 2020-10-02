@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
+          limit: 20
         ) {
           nodes {
             fields {
@@ -21,6 +21,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               title
+              tags
             }
           }
         }

@@ -5,12 +5,12 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Posts from "../components/posts"
-import PostSlider from "../components/slider"
 import InlinePost from "../components/inline-post"
 import Subscribe from "../components/subscribe"
-import Footer from "../components/layouts/footer"
 import { Helmet } from "react-helmet"
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ data }) => {
+  const posts = data.allMarkdownRemark.nodes
+
   return (
     <Layout>
       <Helmet title="Shivaluma" />
@@ -18,20 +18,17 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
 
       <Posts title="Latest posts.">
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-        <InlinePost />
-      </Posts>
+        {posts.map((post, index) => {
+          const title = post.frontmatter.title || post.fields.slug
+          const { date, tags } = post.frontmatter
 
+          return (
+            <Link key={index} to={post.fields.slug} itemProp="url">
+              <InlinePost title={title} date={date} tags={tags} />
+            </Link>
+          )
+        })}
+      </Posts>
       <Subscribe />
     </Layout>
   )
@@ -56,6 +53,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
         }
       }
     }

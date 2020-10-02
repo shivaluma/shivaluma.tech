@@ -7,15 +7,12 @@ import SEO from "../components/seo"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  console.log(data)
   const { previous, next } = pageContext
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
+    <Layout>
+      <SEO postPath={location.pathname} postNode={post} postSEO />
       <article
         className="blog-post"
         itemScope
@@ -30,20 +27,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
       <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -81,6 +67,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

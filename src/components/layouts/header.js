@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import { FiSearch } from "react-icons/fi"
 
@@ -8,9 +9,9 @@ const Header = () => {
     <header className="bg-white">
       <div className="container">
         <div className="flex items-center justify-center py-8 lg:justify-between">
-          <div>
-            <img src={Logo} alt="Logo" />
-          </div>
+          <Link to="/">
+            <img className="cursor-pointer" src={Logo} alt="Logo" />
+          </Link>
           <div className="relative hidden text-gray-800 lg:block">
             <input
               type="search"
