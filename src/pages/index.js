@@ -16,24 +16,6 @@ const BlogIndex = ({ data, location }) => {
       <Helmet title="Shivaluma" />
       <SEO />
       <Bio />
-      <Posts title="Featured this month">
-        <PostSlider
-          posts={[
-            {
-              category: "gatsby",
-            },
-            {
-              category: "react",
-            },
-            {
-              category: "javascript",
-            },
-            {
-              category: "react",
-            },
-          ]}
-        />
-      </Posts>
 
       <Posts title="Latest posts.">
         <InlinePost />
