@@ -23,14 +23,14 @@ const Header = () => {
             </button>
           </div>
           <div className="items-end hidden lg:flex">
-            <span className="px-4 text-sm font-semibold text-gray-800 hover:text-blue-700">
+            <span className="px-4 text-sm font-semibold text-gray-800 cursor-pointer hover:text-blue-700">
               Home
             </span>
-            <span className="px-4 text-sm font-semibold text-gray-800 hover:text-blue-700">
-              About Me
+            <span className="px-4 text-sm font-semibold text-gray-800 cursor-pointer hover:text-blue-700">
+              Blog
             </span>
-            <span className="px-4 text-sm font-semibold text-gray-800 hover:text-blue-700">
-              Contact Me
+            <span className="px-4 text-sm font-semibold text-gray-800 cursor-pointer hover:text-blue-700">
+              Guide
             </span>
           </div>
         </div>

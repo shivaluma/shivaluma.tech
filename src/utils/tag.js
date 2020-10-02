@@ -1,6 +1,6 @@
 export const tag = {
   javascript: {
-    bgcolor: "#fff3bf",
+    bgcolor: "#f0da1f",
     color: "#000",
   },
   fundamentals: {

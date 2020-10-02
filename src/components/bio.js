@@ -7,7 +7,7 @@
 
 import React from "react"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
-
+import Avatar from "../assets/shiro.jpeg"
 const Bio = () => {
   return (
     <div className="relative bg-white">
@@ -47,7 +47,7 @@ const Bio = () => {
               style={{ left: "50%" }}
             >
               <img
-                src="https://avatars0.githubusercontent.com/u/33391636?s=460&v=4"
+                src={Avatar}
                 className="w-64 h-64 rounded-full shadow-xl"
                 alt="Shivaluma"
               />
