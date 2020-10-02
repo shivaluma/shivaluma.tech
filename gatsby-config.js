@@ -37,6 +37,14 @@ module.exports = {
             },
           },
           {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+              rule: {
+                include: /\.inline\.svg$/,
+              },
+            },
+          },
+          {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
@@ -45,6 +53,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-plugin-postcss`,
         ],
       },
     },
