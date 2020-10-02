@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </header>
         <div className="relative flex mt-8">
           <section
-            className="flex-wrap flex-grow pt-3 overflow-hidden leading-7 whitespace-normal"
+            className="flex-wrap flex-grow pt-3 overflow-hidden leading-7 whitespace-normal markdown-body"
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           />

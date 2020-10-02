@@ -27,7 +27,7 @@ const BlogIndex = ({ data }) => {
               key={index}
               to={post.fields.slug}
               itemProp="url"
-              ariaLabel={post.frontmatter.title}
+              aria-label={post.frontmatter.title}
             >
               <InlinePost title={title} date={date} tags={tags} />
             </Link>
