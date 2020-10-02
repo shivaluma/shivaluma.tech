@@ -15,7 +15,7 @@ const InlinePost = ({ title, date, tags }) => {
         </div>
 
         <div className="flex flex-wrap items-center flex-shrink-0 w-full mt-5 lg:w-1/3 lg:mt-0">
-          {tags && tags.map(tag => <Tag text={tag} />)}
+          {tags && tags.map((tag, index) => <Tag key={index} text={tag} />)}
         </div>
       </div>
     </article>

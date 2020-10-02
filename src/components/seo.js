@@ -16,7 +16,7 @@ export default function SEO({
 
   if (postSEO) {
     const postMeta = postNode.frontmatter
-    title = postMeta.title
+    title = postMeta.title + " - " + config.siteTitle
     description = postNode.excerpt
 
     if (postMeta.thumbnail) {
@@ -74,6 +74,7 @@ export default function SEO({
   }
   return (
     <Helmet>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="image" content={image} />
 
