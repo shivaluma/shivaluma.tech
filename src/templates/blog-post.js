@@ -30,8 +30,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           />
-          <div>
-            <nav className="sticky top-0 flex-shrink-0 hidden w-64 py-3 text-lg font-semibold border-b border-gray-400 lg:block">
+          <div className="ml-3">
+            <nav className="sticky top-0 flex-shrink-0 hidden w-64 py-2 text-lg font-semibold border-b border-gray-400 lg:block">
               Table of contents
             </nav>
           </div>
@@ -41,14 +41,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <ul>
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link aria-label="prev" to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link aria-label="next" to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}

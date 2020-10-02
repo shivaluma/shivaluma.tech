@@ -20,6 +20,7 @@ const Subscribe = () => {
         <input
           className="w-64 px-6 py-3 mt-8 bg-gray-200 rounded-lg focus:outline-none"
           placeholder="Email address..."
+          aria-labelledby="subscribe-bar"
         ></input>
 
         <button className="px-6 py-3 mt-5 font-medium text-white bg-black rounded-lg focus:outline-none">

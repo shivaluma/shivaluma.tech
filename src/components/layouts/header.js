@@ -18,6 +18,7 @@ const Header = () => {
               name="search"
               label="Search"
               placeholder="Search for post..."
+              aria-labelledby="search-bar"
               className="h-10 px-8 pr-10 text-sm bg-gray-300 rounded-full focus:outline-none"
             />
 

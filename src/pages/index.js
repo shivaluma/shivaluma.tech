@@ -23,7 +23,12 @@ const BlogIndex = ({ data }) => {
           const { date, tags } = post.frontmatter
 
           return (
-            <Link key={index} to={post.fields.slug} itemProp="url">
+            <Link
+              key={index}
+              to={post.fields.slug}
+              itemProp="url"
+              ariaLabel={post.frontmatter.title}
+            >
               <InlinePost title={title} date={date} tags={tags} />
             </Link>
           )
