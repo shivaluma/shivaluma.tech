@@ -5,7 +5,7 @@ module.exports = {
   },
   purge: {
     mode: "all",
-    content: ["./src/**/*.js"],
+    content: ["./src/**/*.js", "./node_modules/slick-carousel/slick/*.js"],
   },
   target: "relaxed",
   prefix: "",
