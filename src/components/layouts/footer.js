@@ -6,8 +6,11 @@ import VercelIcon from "../../assets/vercel.svg"
 
 const Footer = () => {
   return (
-    <footer className="text-center py-5" style={{ color: "rgba(0,0,0,0.7)" }}>
-      <ul className="list-none flex justify-center">
+    <footer
+      className="text-center py-5 container px-4"
+      style={{ color: "rgba(0,0,0,0.7)" }}
+    >
+      <ul className="list-none flex justify-center flex-wrap">
         <li className="px-8 py-3 rounded-lg hover:bg-gray-1000 cursor-pointer">
           Blog
         </li>
@@ -28,7 +31,7 @@ const Footer = () => {
         </li>
       </ul>
 
-      <nav className="flex justify-center mt-8">
+      <nav className="flex justify-center mt-8 flex-wrap">
         <a
           href="https://www.gatsbyjs.org/"
           title="Built with Gatsby"
