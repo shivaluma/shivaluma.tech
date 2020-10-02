@@ -11,16 +11,22 @@ const Header = () => {
           <div>
             <img src={Logo} alt="Logo" />
           </div>
-          <div className="relative hidden text-gray-600 lg:block">
+          <div className="relative hidden text-gray-800 lg:block">
             <input
               type="search"
               name="search"
+              label="Search"
               placeholder="Search for post..."
-              className="h-10 px-8 pr-10 text-sm bg-gray-200 rounded-full focus:outline-none"
+              className="h-10 px-8 pr-10 text-sm bg-gray-300 rounded-full focus:outline-none"
             />
-            <button type="submit" className="absolute top-0 right-0 mt-3 mr-4">
+
+            <span
+              id="search-bar"
+              type="submit"
+              className="absolute top-0 right-0 mt-3 mr-4"
+            >
               <FiSearch className="w-4 h-4" />
-            </button>
+            </span>
           </div>
           <div className="items-end hidden lg:flex">
             <span className="px-4 text-sm font-semibold text-gray-800 cursor-pointer hover:text-blue-700">

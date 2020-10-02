@@ -18,9 +18,9 @@ const Bio = () => {
               Hi, I'm <span className="text-blue-700">Viet Thanh</span>.
             </h2>
 
-            <h2 className="text-3xl font-extrabold lg:text-4xl">
+            <h3 className="text-3xl font-extrabold lg:text-4xl">
               Full-stack Developer.
-            </h2>
+            </h3>
 
             <h4 className="mt-6 text-lg font-semibold text-gray-700 lg:text-xl">
               Specialized in Javascript, React, NextJS, NodeJS.
