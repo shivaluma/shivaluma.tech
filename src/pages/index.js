@@ -9,12 +9,12 @@ import PostSlider from "../components/slider"
 import InlinePost from "../components/inline-post"
 import Subscribe from "../components/subscribe"
 import Footer from "../components/layouts/footer"
+import { Helmet } from "react-helmet"
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
-
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
+      <Helmet title="Shivaluma" />
+      <SEO />
       <Bio />
       <Posts title="Featured this month">
         <PostSlider
@@ -51,7 +51,6 @@ const BlogIndex = ({ data, location }) => {
       </Posts>
 
       <Subscribe />
-      <Footer />
     </Layout>
   )
 }
