@@ -6,7 +6,7 @@ const PostCard = ({ post }) => {
 
   return (
     <div
-      className="relative z-50 overflow-hidden duration-300 ease-in-out transform shadow-lg rounded-2xl w-72 h-88 hover:-translate-y-2"
+      className="relative z-50 overflow-hidden shadow-lg rounded-2xl w-full h-80"
       style={{
         background: data.bgcolor,
       }}
@@ -17,7 +17,7 @@ const PostCard = ({ post }) => {
           background: "linear-gradient( 0deg, #2d3748 0%, transparent 100% )",
         }}
       ></div>
-      <div className="absolute top-0 left-0 z-10 w-full h-full bg-cover avatar-bg opacity-15"></div>
+      <div className="absolute top-0 left-0 z-10 w-full h-full bg-cover avatar-bg opacity-10"></div>
       <div className="absolute" style={{ top: 20, left: 20 }}>
         <span className="px-2 py-1 text-sm text-black bg-white rounded-md">
           {data.name}

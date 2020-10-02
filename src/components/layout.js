@@ -22,14 +22,9 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="bg-gray-100" data-is-root-path={isRootPath}>
+    <div data-is-root-path={isRootPath}>
       <Header />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
     </div>
   )
 }

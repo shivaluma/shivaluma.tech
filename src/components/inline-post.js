@@ -15,7 +15,7 @@ const InlinePost = () => {
           </h4>
         </div>
 
-        <div className="flex flex-wrap items-center flex-shrink-0 w-1/3 mt-5 lg:mt-0">
+        <div className="flex flex-wrap items-center flex-shrink-0 w-full lg:w-1/3 mt-5 lg:mt-0">
           <Tag text="Javascript" />
           <Tag text="Asynchronous" />
           <Tag text="Asynchronous" />

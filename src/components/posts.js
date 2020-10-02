@@ -3,7 +3,7 @@ import React from "react"
 const Posts = ({ title, children }) => {
   return (
     <div className="container mt-12 mb-16">
-      <div className="flex items-center">
+      <div className="flex items-center justify-between lg:justify-start">
         <div className="pl-6 text-2xl font-extrabold border-l-4 border-gray-500 Muli">
           {title}
         </div>

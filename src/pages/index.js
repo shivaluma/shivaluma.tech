@@ -7,7 +7,8 @@ import SEO from "../components/seo"
 import Posts from "../components/posts"
 import PostSlider from "../components/slider"
 import InlinePost from "../components/inline-post"
-
+import Subscribe from "../components/subscribe"
+import Footer from "../components/layouts/footer"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -48,6 +49,9 @@ const BlogIndex = ({ data, location }) => {
         <InlinePost />
         <InlinePost />
       </Posts>
+
+      <Subscribe />
+      <Footer />
     </Layout>
   )
 }

@@ -32,6 +32,7 @@ module.exports = {
         700: "#4a5568",
         800: "#2d3748",
         900: "#1a202c",
+        1000: "#e6e8eb",
       },
       red: {
         100: "#fff5f5",
@@ -235,7 +236,12 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
-      
+      screens: {
+        sm: "100%",
+        md: "100%",
+        lg: "900px",
+        xl: "1100px",
+      },
     },
     cursor: {
       auto: "auto",
@@ -400,6 +406,7 @@ module.exports = {
     },
     opacity: {
       0: "0",
+      5: "0.5",
       10: "0.1",
       15: "0.15",
       25: "0.25",

@@ -12,9 +12,12 @@
 
 .avatar-bg {
   background-image: url("./assets/avatarbg.png");
-  background-size: 8rem;
+  background-size: contain;
 }
 
+.slick-slide > div {
+  margin: 0 8px;
+}
 .slick-list {
-  overflow: visible !important;
+  margin: 0 -8px;
 }

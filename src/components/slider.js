@@ -17,7 +17,6 @@ const PostSlider = ({ posts }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: true,
           dots: true,
         },
       },
@@ -33,7 +32,7 @@ const PostSlider = ({ posts }) => {
         breakpoint: 640,
         settings: {
           centerMode: true,
-          centerPadding: "28px",
+          centerPadding: "0px",
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -42,7 +41,7 @@ const PostSlider = ({ posts }) => {
   }
 
   return (
-    <div className="hidden lg:block">
+    <div>
       <Slider {...settings}>
         {posts && posts.map(post => <PostCard post={post} />)}
       </Slider>
