@@ -14,17 +14,17 @@ const Bio = () => {
       <div className="container">
         <div className="flex w-full pt-8 pb-16">
           <div className="w-full text-center lg:text-left lg:w-1/2 Muli ">
-            <h2 className="text-4xl font-extrabold lg:text-5xl">
+            <h1 className="text-4xl font-extrabold lg:text-5xl">
               Hi, I'm <span className="text-blue-700">Viet Thanh</span>.
+            </h1>
+
+            <h2 className="text-3xl font-extrabold lg:text-4xl">
+              Full-stack Developer.
             </h2>
 
-            <h3 className="text-3xl font-extrabold lg:text-4xl">
-              Full-stack Developer.
-            </h3>
-
-            <h4 className="mt-6 text-lg font-semibold text-gray-700 lg:text-xl">
+            <h3 className="mt-6 text-lg font-semibold text-gray-700 lg:text-xl">
               Specialized in Javascript, React, NextJS, NodeJS.
-            </h4>
+            </h3>
 
             <div className="mt-8 font-extrabold">
               <button className="inline-flex items-center px-5 py-3 text-black bg-white border-2 border-black rounded-lg hover:bg-black hover:text-white focus:outline-none text-md Muli">
