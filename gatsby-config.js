@@ -145,7 +145,14 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://shivaluma.tech",
+        sitemap: "https://shivaluma.tech/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    }`gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
   ],
