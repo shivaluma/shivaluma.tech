@@ -16,6 +16,10 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.selected-anchor {
+  @apply px-4 border-l-4 border-gray-600;
+}
+
 .avatar-bg {
   background-image: url("./assets/avatarbg.png");
   background-size: contain;

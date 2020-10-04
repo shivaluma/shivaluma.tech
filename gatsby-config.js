@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Shivaluma`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Viet Thanh`,
+      summary: `Specialized in Javascript, ReactJS, NodeJS, NextJS.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `A blog where i document anything i learn.`,
+    siteUrl: `https://shivaluma.tech`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `shivaluma`,
     },
   },
   plugins: [
@@ -57,6 +57,8 @@ module.exports = {
               theme: "one-dark",
             },
           },
+
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
@@ -80,7 +82,7 @@ module.exports = {
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#000`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

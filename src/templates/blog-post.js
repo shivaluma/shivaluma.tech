@@ -1,19 +1,37 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useMemo } from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 import Comment from "../components/comment"
-deckDeckGoHighlightElement()
+import slugs from "github-slugger"
+import Toc from "../components/toc"
+const preprocessHeading = h => {
+  const cleanValue = h.value
+    .replace(/<(\/)?[^>]+>/g, "")
+    .replace(/\s{2,}/g, " ")
+  return {
+    depth: h.depth,
+    value: cleanValue,
+    id: slugs.slug(cleanValue),
+  }
+}
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
 
   const { previous, next } = pageContext
+  const headings = useMemo(() => {
+    return data.markdownRemark.headings
+      .filter(h => h.depth >= 1 && h.depth <= 6)
+      .map(preprocessHeading)
+  }, [])
 
   const commentBox = React.createRef()
 
   useEffect(() => {
+    deckDeckGoHighlightElement()
     const commentScript = document.createElement("script")
 
     commentScript.async = true
@@ -59,9 +77,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               <Comment commentBox={commentBox} />
             </div>
           </div>
-          <div className="ml-3">
-            <nav className="sticky top-0 flex-shrink-0 hidden w-64 py-2 text-lg font-semibold border-b border-gray-400 lg:block">
-              Table of contents
+          <div className="ml-5">
+            <nav className="sticky top-0 flex-shrink-0 hidden w-64 lg:block">
+              <div className="w-full py-2 text-lg font-semibold border-b border-gray-400">
+                Table of contents
+              </div>
+              <Toc headers={headings} />
             </nav>
           </div>
         </div>
@@ -101,6 +122,10 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      headings {
+        depth
+        value
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
