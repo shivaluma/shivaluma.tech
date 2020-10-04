@@ -35,7 +35,7 @@ Với sự xuất hiện của Flexbox thì ta sẽ có thêm 1 kiểu mới là
 
 ### flex-direction
 
-![](https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg)
+![flex-direction](https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg)
 
 Thuộc tính **flex-direction** sẽ thiết lập trục chính cho container flex cũng như xác định hướng để bố trí các items thuộc container.
 
@@ -55,7 +55,7 @@ Với **column** / **column-reverse**, trục chính sẽ chuyển từ nằm ng
 
 ### flex-wrap
 
-![](https://css-tricks.com/wp-content/uploads/2018/10/flex-wrap.svg)
+![flex-wrap](https://css-tricks.com/wp-content/uploads/2018/10/flex-wrap.svg)
 
 Theo mặc định, flex container sẽ cố gắng để nhét tất cả các items lên cùng một hàng. Vậy khi items quá nhiều thì sao @@!, các item sẽ bị tràn ra ngoài container trên hàng đó :v. Có vẻ hơi chuối nhưng không sao vì đã có thuộc tính flex-wrap sinh ra để giải quết vấn đề này.
 
