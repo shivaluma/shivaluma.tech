@@ -11,7 +11,10 @@ export const tag = {
     bgcolor: "#264de4",
     color: "#fff",
   },
-
+  react: {
+    bgcolor: "#61DBFB",
+    color: "#fff",
+  },
   other: {
     bgcolor: "rgba(0,0,0,.1)",
     color: "#1b1d25",
