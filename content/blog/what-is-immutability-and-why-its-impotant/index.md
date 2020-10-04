@@ -162,7 +162,7 @@ str.myNewProperty = "some value"
 console.log(str.myNewProperty) // some value
 ```
 
-![](https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2018/04/0_f3DODCqLTseJ5h3L.png?w=302&ssl=1)
+![immutability string](https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2018/04/0_f3DODCqLTseJ5h3L.png?w=302&ssl=1)
 
 Ví dụ trên cho ta thấy cách tạo ra một Object String từ constructor với một giá trị immutability string. Nhưng mà chúng ta có thể thêm thuộc tính mới cho wrapper này bởi vì nó là một object, và nó không được **đóng băng**.
 
