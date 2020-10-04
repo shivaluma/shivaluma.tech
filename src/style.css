@@ -17,7 +17,7 @@
 }
 
 .selected-anchor {
-  @apply px-4 border-l-4 border-gray-600;
+  @apply px-4 text-blue-700 border-l-4 border-blue-700;
 }
 
 .avatar-bg {
