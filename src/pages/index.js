@@ -10,7 +10,7 @@ import Subscribe from "../components/subscribe"
 import { Helmet } from "react-helmet"
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
-
+  console.log(data)
   return (
     <Layout>
       <Helmet title="Shivaluma" />
@@ -21,7 +21,7 @@ const BlogIndex = ({ data }) => {
         {posts.map((post, index) => {
           const title = post.frontmatter.title || post.fields.slug
           const { date, tags } = post.frontmatter
-
+          const time = post.fields.readingTime.text || "4 min read"
           return (
             <Link
               key={index}
@@ -29,7 +29,7 @@ const BlogIndex = ({ data }) => {
               itemProp="url"
               aria-label={post.frontmatter.title}
             >
-              <InlinePost title={title} date={date} tags={tags} />
+              <InlinePost title={title} date={date} tags={tags} time={time} />
             </Link>
           )
         })}
@@ -53,6 +53,9 @@ export const pageQuery = graphql`
         excerpt
         fields {
           slug
+          readingTime {
+            text
+          }
         }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")

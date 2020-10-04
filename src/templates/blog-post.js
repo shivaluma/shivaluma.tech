@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
     return data.markdownRemark.headings
       .filter(h => h.depth >= 1 && h.depth <= 6)
       .map(preprocessHeading)
-  }, [])
+  }, [data.markdownRemark.headings])
 
   const commentBox = React.createRef()
 

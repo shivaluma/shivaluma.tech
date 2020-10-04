@@ -1,6 +1,6 @@
 import React from "react"
 import Tag from "./tag"
-const InlinePost = ({ title, date, tags }) => {
+const InlinePost = ({ title, date, tags, time }) => {
   return (
     <article
       itemScope
@@ -9,7 +9,11 @@ const InlinePost = ({ title, date, tags }) => {
     >
       <div className="flex flex-col lg:flex-row lg:items-center">
         <div className="flex flex-col flex-grow mr-6">
-          <span className="text-xs font-medium text-gray-700">{date}</span>
+          <div className="flex items-center text-xs font-medium text-gray-700">
+            <span>{date}</span>
+            <span className="mx-2">&bull;</span>
+            <span>{time}</span>
+          </div>
 
           <h4 className="text-xl font-semibold text-black Muli">{title}</h4>
         </div>
