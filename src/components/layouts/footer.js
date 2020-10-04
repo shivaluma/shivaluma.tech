@@ -7,62 +7,54 @@ import VercelIcon from "../../assets/vercel.svg"
 const Footer = () => {
   return (
     <footer
-      className="text-center py-5 container px-4"
+      className="container px-4 py-5 text-center"
       style={{ color: "rgba(0,0,0,0.7)" }}
     >
-      <ul className="list-none flex justify-center flex-wrap">
-        <li className="px-8 py-3 rounded-lg hover:bg-gray-1000 cursor-pointer">
+      <ul className="flex flex-wrap justify-center list-none">
+        <li className="px-8 py-3 rounded-lg cursor-pointer hover:bg-gray-1000">
           Blog
         </li>
-        <li className="px-8 py-3 rounded-lg hover:bg-gray-1000 cursor-pointer">
+        <li className="px-8 py-3 rounded-lg cursor-pointer hover:bg-gray-1000">
           Guide
         </li>
-        <li className="px-8 py-3 rounded-lg hover:bg-gray-1000 cursor-pointer">
+        <li className="px-8 py-3 rounded-lg cursor-pointer hover:bg-gray-1000">
           RSS
         </li>
-        <li className="px-8 py-3 rounded-lg hover:bg-gray-1000 cursor-pointer">
+        <li className="px-8 py-3 rounded-lg cursor-pointer hover:bg-gray-1000">
           Facebook
         </li>
-        <li className="px-8 py-3 rounded-lg hover:bg-gray-1000 cursor-pointer">
+        <li className="px-8 py-3 rounded-lg cursor-pointer hover:bg-gray-1000">
           LinkedIn
         </li>
-        <li className="px-8 py-3 rounded-lg hover:bg-gray-1000 cursor-pointer">
+        <li className="px-8 py-3 rounded-lg cursor-pointer hover:bg-gray-1000">
           Github
         </li>
       </ul>
 
-      <nav className="flex justify-center mt-8 flex-wrap">
+      <nav className="flex flex-wrap justify-center mt-8">
         <a
           href="https://www.gatsbyjs.org/"
           title="Built with Gatsby"
           target="_blank"
           rel="noopener noreferrer"
-          className="img"
         >
-          <img src={GatsbyIcon} className="h-12 w-auto mx-4" alt="Gatsby" />
+          <img src={GatsbyIcon} className="w-auto h-12 mx-4" alt="Gatsby" />
         </a>
         <a
           href="https://github.com/shivaluma"
           title="Open-source on GitHub"
           target="_blank"
           rel="noopener noreferrer"
-          className="img"
         >
-          <img src={GithubIcon} className="h-12 w-auto mx-4" alt="GitHub" />
+          <img src={GithubIcon} className="w-auto h-12 mx-4" alt="GitHub" />
         </a>
         <a
           href="https://www.vercel.com/"
           title="Hosted by Vercel"
           target="_blank"
           rel="noopener noreferrer"
-          className="img"
         >
-          <img
-            src={VercelIcon}
-            className="h-12 w-auto mx-4"
-            className="footer-img"
-            alt="Vercel"
-          />
+          <img src={VercelIcon} className="w-auto h-12 mx-4" alt="Vercel" />
         </a>
       </nav>
     </footer>
