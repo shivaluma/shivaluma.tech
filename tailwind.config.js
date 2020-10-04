@@ -247,7 +247,7 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: "2rem",
+      padding: ".8rem",
       screens: {
         sm: "100%",
         md: "100%",

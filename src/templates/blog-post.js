@@ -71,9 +71,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           )}
         </header>
         <div className="relative flex w-full mt-8">
-          <div className="flex flex-col flex-wrap flex-grow">
+          <div className="flex flex-col flex-wrap w-full">
             <section
-              className="pt-3 overflow-hidden leading-7 break-words markdown-body"
+              className="w-full pt-3 overflow-hidden leading-7 break-words markdown-body"
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"
             />
