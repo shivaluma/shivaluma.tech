@@ -17,7 +17,7 @@ export default function SEO({
   if (postSEO) {
     const postMeta = postNode.frontmatter
     title = postMeta.title + " - " + config.siteTitle
-    description = postNode.excerpt
+    description = postMeta.description || postNode.excerpt
 
     if (postMeta.thumbnail) {
       image = postMeta.thumbnail.childImageSharp.fixed.src

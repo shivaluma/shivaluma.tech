@@ -60,12 +60,20 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1 className="text-4xl font-semibold Muli " itemProp="headline">
             {post.frontmatter.title}
           </h1>
-          <p className="text-sm text-gray-700">{post.frontmatter.date}</p>
+          <time className="text-sm text-gray-700">{post.frontmatter.date}</time>
+          {post.frontmatter.description && (
+            <p
+              className="mt-5 text-xl font-light text-gray-600"
+              aria-label="descriptions"
+            >
+              {post.frontmatter.description}
+            </p>
+          )}
         </header>
-        <div className="relative flex mt-8">
-          <div>
+        <div className="relative flex w-full mt-8">
+          <div className="flex-wrap flex-grow ">
             <section
-              className="flex-wrap flex-grow pt-3 overflow-hidden leading-7 whitespace-normal markdown-body"
+              className="pt-3 overflow-hidden leading-7 break-words markdown-body"
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"
             />

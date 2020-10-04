@@ -18,7 +18,7 @@ const Toc = ({ headers }) => {
           }
         })
       },
-      { rootMargin: `0% 0% -80% 0%`, threshold: 1.0 }
+      { rootMargin: `0% 0% -80% 0%`, threshold: 0.3 }
     )
 
     allHeadings.forEach(section => observer.observe(section))

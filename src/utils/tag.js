@@ -7,6 +7,11 @@ export const tag = {
     bgcolor: "#d3f9d8",
     color: "#000",
   },
+  css: {
+    bgcolor: "#264de4",
+    color: "#fff",
+  },
+
   other: {
     bgcolor: "rgba(0,0,0,.1)",
     color: "#1b1d25",
