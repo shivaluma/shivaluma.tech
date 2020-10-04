@@ -136,8 +136,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Shivaluma Blog`,
+        short_name: `Shivaluma`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#000`,
