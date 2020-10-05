@@ -6538,6 +6538,13 @@ gatsby-page-utils@^0.2.25:
     lodash "^4.17.20"
     micromatch "^3.1.10"
 
+gatsby-plugin-canonical-urls@^2.3.12:
+  version "2.3.12"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.3.12.tgz#2fc4f662260d3d969cca2a137eea6a02c57458ab"
+  integrity sha512-C+9nJAwqQt9/o5WtCVReTdLMwr8WCCryjvkbvx1xRVcLENr9ZdN/LLE05Fhuc7POgI70v/Qm4qM1Kx3V85VVKQ==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+
 gatsby-plugin-feed@^2.5.12:
   version "2.5.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.5.12.tgz#190caa89c75504c2f893216de4001247b26d956c"
