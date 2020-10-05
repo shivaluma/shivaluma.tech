@@ -90,14 +90,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               />
             </div>
 
-            <div id="comments" className="mt-8">
-              <h2 className="w-full py-2 text-3xl font-semibold border-b">
-                Comments
-              </h2>
-              <Comment commentBox={commentBox} />
-            </div>
-
-            <nav className="w-full mx-2">
+            <nav className="w-full mt-2">
               <ul className="w-full flex gap-2 md:flex-row flex-col">
                 {previous && (
                   <Link
@@ -131,6 +124,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 )}
               </ul>
             </nav>
+
+            <div id="comments" className="mt-8">
+              <h2 className="w-full py-2 text-3xl font-semibold border-b">
+                Comments
+              </h2>
+              <Comment commentBox={commentBox} />
+            </div>
           </div>
           <div className="ml-5">
             <nav className="sticky top-0 flex-shrink-0 hidden w-64 lg:block">
