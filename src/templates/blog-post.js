@@ -7,6 +7,7 @@ import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/
 import Comment from "../components/comment"
 import slugs from "github-slugger"
 import Toc from "../components/toc"
+import ShareButtons from "../components/sharebuttons"
 const preprocessHeading = h => {
   const cleanValue = h.value
     .replace(/<(\/)?[^>]+>/g, "")
@@ -77,6 +78,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"
             />
+
+            <div className="w-full py-2 flex flex-col mt-5">
+              <span className="text-md italic font-medium mb-2">
+                Love this post ? Share it!
+              </span>
+              <ShareButtons
+                title={post.frontmatter.title}
+                url={location.href}
+              />
+            </div>
 
             <div id="comments" className="mt-8">
               <h2 className="w-full py-2 text-3xl font-semibold border-b">
