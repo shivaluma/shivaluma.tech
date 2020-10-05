@@ -8,6 +8,7 @@ import Comment from "../components/comment"
 import slugs from "github-slugger"
 import Toc from "../components/toc"
 import ShareButtons from "../components/sharebuttons"
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi"
 const preprocessHeading = h => {
   const cleanValue = h.value
     .replace(/<(\/)?[^>]+>/g, "")
@@ -95,6 +96,41 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               </h2>
               <Comment commentBox={commentBox} />
             </div>
+
+            <nav className="w-full mx-2">
+              <ul className="w-full flex gap-2 md:flex-row flex-col">
+                {previous && (
+                  <Link
+                    aria-label="prev"
+                    to={previous.fields.slug}
+                    className="text-black flex-1"
+                    rel="prev"
+                  >
+                    <li className="w-full flex flex-col justify-center font-semibold border border-gray-700 rounded-md h-auto px-3 py-2">
+                      <span className="text-md text-gray-800 font-light">
+                        PREV POST
+                      </span>
+                      {previous.frontmatter.title}
+                    </li>
+                  </Link>
+                )}
+                {next && (
+                  <Link
+                    aria-label="next"
+                    to={next.fields.slug}
+                    className="text-black flex-1 "
+                    rel="next"
+                  >
+                    <li className="flex w-full flex-col justify-center font-semibold border border-gray-700 rounded-md h-auto px-3 py-2">
+                      <span className="text-md text-gray-800 font-light">
+                        NEXT POST
+                      </span>
+                      {next.frontmatter.title}
+                    </li>
+                  </Link>
+                )}
+              </ul>
+            </nav>
           </div>
           <div className="ml-5">
             <nav className="sticky top-0 flex-shrink-0 hidden w-64 lg:block">
@@ -106,24 +142,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </div>
         </div>
       </article>
-      <nav className="blog-post-nav">
-        <ul>
-          <li>
-            {previous && (
-              <Link aria-label="prev" to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link aria-label="next" to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
     </Layout>
   )
 }
