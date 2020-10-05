@@ -77,14 +77,6 @@ export default function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="image" content={image} />
-      <meta
-        name="keywords"
-        content={
-          postSEO
-            ? [...postNode.frontmatter.tags, ...sampleKeywords].join(", ")
-            : sampleKeywords.join(", ")
-        }
-      />
 
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
