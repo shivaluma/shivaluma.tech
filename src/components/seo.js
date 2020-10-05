@@ -13,7 +13,7 @@ export default function SEO({
   let description
   let image = config.siteLogo
   let postURL
-
+  const sampleKeywords = ["Shivaluma", "Viet Thanh"]
   if (postSEO) {
     const postMeta = postNode.frontmatter
     title = postMeta.title + " - " + config.siteTitle
@@ -77,6 +77,14 @@ export default function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="image" content={image} />
+      <meta
+        name="keywords"
+        content={
+          postSEO
+            ? [...postNode.frontmatter.tags, ...sampleKeywords].join(", ")
+            : sampleKeywords.join(", ")
+        }
+      />
 
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
@@ -86,6 +94,7 @@ export default function SEO({
       {postSEO && <meta property="og:type" content="article" />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
       <meta property="og:image" content={image} />
 
       <meta name="twitter:card" content="summary" />
