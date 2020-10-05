@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <Helmet>
-        <html lang="en" />
+        <html lang="vi" />
       </Helmet>
 
       <main>{children}</main>
