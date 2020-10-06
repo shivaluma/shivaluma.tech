@@ -1,3 +1,4 @@
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Shivaluma`,
@@ -168,6 +169,14 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: "SWS8Z924V3",
+        apiKey: "99b2c5b319fabd80ed6a22eaea186e60",
+        queries: require("./src/utils/algolia-queries.js"),
+      },
+    },
     // `gatsby-plugin-offline`,
   ],
 }

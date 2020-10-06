@@ -10,7 +10,7 @@ import Subscribe from "../components/subscribe"
 import { Helmet } from "react-helmet"
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
-  console.log(data)
+
   return (
     <Layout>
       <Helmet title="Shivaluma" />
@@ -61,7 +61,6 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
-          tags
         }
       }
     }

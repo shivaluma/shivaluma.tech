@@ -8,7 +8,7 @@ import Comment from "../components/comment"
 import slugs from "github-slugger"
 import Toc from "../components/toc"
 import ShareButtons from "../components/sharebuttons"
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi"
+
 const preprocessHeading = h => {
   const cleanValue = h.value
     .replace(/<(\/)?[^>]+>/g, "")
@@ -80,8 +80,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               itemProp="articleBody"
             />
 
-            <div className="w-full py-2 flex flex-col mt-5">
-              <span className="text-md italic font-medium mb-2">
+            <div className="flex flex-col w-full py-2 mt-5">
+              <span className="mb-2 italic font-medium text-md">
                 Love this post ? Share it!
               </span>
               <ShareButtons
@@ -91,16 +91,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
 
             <nav className="w-full mt-2">
-              <ul className="w-full flex gap-2 md:flex-row flex-col">
+              <ul className="flex flex-col w-full gap-2 md:flex-row">
                 {previous && (
                   <Link
                     aria-label="prev"
                     to={previous.fields.slug}
-                    className="text-black flex-1"
+                    className="flex-1 text-black"
                     rel="prev"
                   >
-                    <li className="w-full flex flex-col justify-center font-semibold border border-gray-700 rounded-md h-auto px-3 py-2">
-                      <span className="text-md text-gray-800 font-light">
+                    <li className="flex flex-col justify-center w-full h-auto px-3 py-2 font-semibold border border-gray-700 rounded-md">
+                      <span className="font-light text-gray-800 text-md">
                         PREV POST
                       </span>
                       {previous.frontmatter.title}
@@ -111,11 +111,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                   <Link
                     aria-label="next"
                     to={next.fields.slug}
-                    className="text-black flex-1 "
+                    className="flex-1 text-black "
                     rel="next"
                   >
-                    <li className="flex w-full flex-col justify-center font-semibold border border-gray-700 rounded-md h-auto px-3 py-2">
-                      <span className="text-md text-gray-800 font-light">
+                    <li className="flex flex-col justify-center w-full h-auto px-3 py-2 font-semibold border border-gray-700 rounded-md">
+                      <span className="font-light text-gray-800 text-md">
                         NEXT POST
                       </span>
                       {next.frontmatter.title}

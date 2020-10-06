@@ -3,7 +3,6 @@ title: Immutability là gì và tại sao nó lại quan trọng
 date: "2020-10-04"
 description: Một khái quát ngắn gọn và đầy đủ về Immutable/Immutability trong Javascript và React.
 tags: ["javascript", "react", "immutability"]
-categories: ["post"]
 ---
 
 # Giới thiệu

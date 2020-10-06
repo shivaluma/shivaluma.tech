@@ -4,10 +4,10 @@ import Header from "./layouts/header"
 import Footer from "./layouts/footer"
 import { Helmet } from "react-helmet"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, hideSearch }) => {
   return (
     <>
-      <Header />
+      <Header hideSearch={hideSearch} />
       <Helmet>
         <html lang="vi" />
       </Helmet>

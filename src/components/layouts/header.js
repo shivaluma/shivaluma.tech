@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi"
 
 import Logo from "../../assets/logo.png"
 
-const Header = () => {
+const Header = ({ hideSearch }) => {
   return (
     <header className="bg-white">
       <div className="container">
@@ -12,33 +12,35 @@ const Header = () => {
           <Link to="/">
             <img className="cursor-pointer" src={Logo} alt="Logo" />
           </Link>
-          <div className="relative hidden text-gray-800 lg:block">
-            <input
-              type="search"
-              name="search"
-              label="Search"
-              placeholder="Search for post..."
-              aria-labelledby="searchbar"
-              className="h-10 px-8 pr-10 text-sm bg-gray-300 rounded-full focus:outline-none"
-            />
+          {!hideSearch && (
+            <div className="relative hidden text-gray-800 lg:block">
+              <input
+                type="search"
+                name="search"
+                label="Search"
+                placeholder="Search for post..."
+                aria-labelledby="searchbar"
+                className="h-10 px-8 pr-10 text-sm bg-gray-300 rounded-full focus:outline-none"
+              />
 
-            <span
-              id="search-bar"
-              type="submit"
-              className="absolute top-0 right-0 mt-3 mr-4"
-            >
-              <FiSearch className="w-4 h-4" />
-            </span>
-          </div>
+              <span
+                id="search-bar"
+                type="submit"
+                className="absolute top-0 right-0 mt-3 mr-4"
+              >
+                <FiSearch className="w-4 h-4" />
+              </span>
+            </div>
+          )}
           <div className="items-end hidden lg:flex">
             <span className="px-4 text-sm font-semibold text-gray-800 cursor-pointer hover:text-blue-700">
               Home
             </span>
             <span className="px-4 text-sm font-semibold text-gray-800 cursor-pointer hover:text-blue-700">
-              Blog
+              About Me
             </span>
             <span className="px-4 text-sm font-semibold text-gray-800 cursor-pointer hover:text-blue-700">
-              Guide
+              Contact
             </span>
           </div>
         </div>

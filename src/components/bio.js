@@ -32,6 +32,7 @@ const Bio = () => {
                 href="https://github.com/shivaluma"
                 target="_blank"
                 aria-label="github shivaluma"
+                rel="noreferrer"
                 className="inline-flex items-center px-5 py-3 text-black bg-white border-2 border-black rounded-lg hover:bg-black hover:text-white focus:outline-none text-md Muli"
               >
                 <FiGithub className="mr-3" /> Github
@@ -41,6 +42,7 @@ const Bio = () => {
                 href="https://linkedin.com/in/shivaluma"
                 target="_blank"
                 aria-label="linkedin shivaluma"
+                rel="noreferrer"
                 className="inline-flex items-center px-5 py-3 ml-6 text-blue-800 bg-white border-2 border-blue-800 rounded-lg hover:text-white hover:bg-blue-800 focus:outline-none text-md Muli"
               >
                 <FiLinkedin className="mr-3" /> LinkedIn
