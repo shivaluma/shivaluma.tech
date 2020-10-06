@@ -3,6 +3,7 @@ title: Hướng dẫn toàn tập về Flexbox
 date: "2020-10-04"
 description: Một hướng dẫn đầy đủ giải thích mọi thứ về flexbox, tập trung vào tất cả các thuộc tính khác nhau của flexbox từ container đến các child item.
 tags: ["css"]
+categories: ["post"]
 ---
 
 # Giới thiệu
