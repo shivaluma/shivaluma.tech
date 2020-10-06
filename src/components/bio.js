@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 /**
  * Bio component that queries for data
  * with Gatsby's useStaticQuery component
@@ -27,13 +28,23 @@ const Bio = () => {
             </h3>
 
             <div className="mt-8 font-extrabold">
-              <button className="inline-flex items-center px-5 py-3 text-black bg-white border-2 border-black rounded-lg hover:bg-black hover:text-white focus:outline-none text-md Muli">
+              <a
+                href="https://github.com/shivaluma"
+                target="_blank"
+                aria-label="github shivaluma"
+                className="inline-flex items-center px-5 py-3 text-black bg-white border-2 border-black rounded-lg hover:bg-black hover:text-white focus:outline-none text-md Muli"
+              >
                 <FiGithub className="mr-3" /> Github
-              </button>
+              </a>
 
-              <button className="inline-flex items-center px-5 py-3 ml-6 text-blue-800 bg-white border-2 border-blue-800 rounded-lg hover:text-white hover:bg-blue-800 focus:outline-none text-md Muli">
+              <a
+                href="https://linkedin.com/in/shivaluma"
+                target="_blank"
+                aria-label="linkedin shivaluma"
+                className="inline-flex items-center px-5 py-3 ml-6 text-blue-800 bg-white border-2 border-blue-800 rounded-lg hover:text-white hover:bg-blue-800 focus:outline-none text-md Muli"
+              >
                 <FiLinkedin className="mr-3" /> LinkedIn
-              </button>
+              </a>
             </div>
           </div>
           <div className="relative flex-1 hidden w-1/2 lg:block">
