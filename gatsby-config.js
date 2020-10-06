@@ -9,7 +9,10 @@ module.exports = {
     siteUrl: `https://shivaluma.tech`,
     social: {
       twitter: `shivaluma`,
+      facebook: `shivaluma`,
     },
+    feedUrl: "https://shivaluma.tech/rss.xml",
+    logo: "https://shivaluma.tech/logo.jpg",
   },
   plugins: [
     {

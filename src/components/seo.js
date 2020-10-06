@@ -13,7 +13,6 @@ export default function SEO({
   let description
   let image = config.siteLogo
   let postURL
-  const sampleKeywords = ["Shivaluma", "Viet Thanh"]
   if (postSEO) {
     const postMeta = postNode.frontmatter
     title = postMeta.title + " - " + config.siteTitle
