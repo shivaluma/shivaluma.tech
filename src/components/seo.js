@@ -8,6 +8,7 @@ export default function SEO({
   postPath,
   postSEO,
   customDescription,
+  tag,
 }) {
   let title
   let description
@@ -26,6 +27,10 @@ export default function SEO({
   } else {
     title = config.siteTitle
     description = customDescription || config.description
+  }
+
+  if (tag) {
+    title = tag + " - " + config.siteTitle
   }
 
   image = `${config.siteUrl}${image}`
