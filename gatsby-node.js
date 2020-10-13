@@ -1,4 +1,5 @@
 const path = require(`path`)
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -6,7 +7,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/post.js`)
-
+  const blogTag = path.resolve("./src/templates/tag.js")
+  const tagSet = new Set()
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
@@ -50,7 +52,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1]
       const next = index === 0 ? null : posts[index - 1]
-
+      if (post.frontmatter.tags) {
+        post.frontmatter.tags.forEach(tag => {
+          tagSet.add(tag)
+        })
+      }
       createPage({
         path: post.fields.slug,
         component: blogPost,
@@ -62,6 +68,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  const tagList = Array.from(tagSet)
+  tagList.forEach(tag => {
+    createPage({
+      path: `/tags/${slugify(tag)}/`,
+      component: blogTag,
+      context: {
+        tag,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -118,4 +135,17 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+// Helpers
+function slugify(str) {
+  return (
+    str &&
+    str
+      .match(
+        /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g
+      )
+      .map(x => x.toLowerCase())
+      .join("-")
+  )
 }
