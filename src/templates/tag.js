@@ -13,7 +13,9 @@ const TagTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout>
-      <Helmet title={`Posts tagged: ${tag} | ${config.siteTitle}`} />
+      <Helmet>
+        <title>{`Posts tagged: ${tag} | ${config.siteTitle}`}</title>
+      </Helmet>
       <SEO />
 
       <header>
