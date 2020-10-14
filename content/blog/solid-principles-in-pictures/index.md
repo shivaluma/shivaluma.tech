@@ -29,3 +29,13 @@ Nếu một Class chứa nhiều trách nhiệm khác nhau sẽ làm tăng khả
 ### Mục đích
 
 Nguyên tắc này nhằm mục đích phân tách các hành vi để nếu lỗi phát sinh do thay đổi nào đó trong code, nó sẽ không ảnh hưởng đến các hành vi không liên quan khác.
+
+## O - Open / Close
+
+_Có thể thoải mái mở rộng một Class, nhưng không được phép sửa đổi nội dung bên trong Class đó._
+
+![Open Close](https://miro.medium.com/max/1000/1*0MtFBmm6L2WVM04qCJOZPQ.png)
+
+Thay đổi hành vi của một class sẽ ảnh hưởng đến hệ thống đang sử dụng Class đó.
+
+Theo nguyên lý này, mỗi khi ta muốn thêm chức năng,.. cho chương trình, chúng ta nên viết class mới mở rộng class cũ ( bằng cách kế thừa hoặc sở hữu class cũ) không nên sửa đổi class cũ.
